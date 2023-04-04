@@ -33,6 +33,10 @@ const router = createBrowserRouter([
      {
       path: 'contact',
       element: <Contact/>
+     },
+     {
+      path: '*',
+      element: <div  className='text-7xl font bold text-center my-64'>404 Not Found</div>
      }
     ]
   }

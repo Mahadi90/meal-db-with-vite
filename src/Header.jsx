@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ActiveLink from './ActiveLink/ActiveLink';
 
 const Header = () => {
     return (
@@ -9,10 +10,10 @@ const Header = () => {
     <Link className="text-2xl font-bold text-red-500">MealDb</Link>
   </div>
     <ul className="flex">
-      <Link className='mr-8 uppercase hover:text-slate-200' to='/'>Home</Link>
-      <Link className='mr-8 uppercase hover:text-slate-200' to='/about'>About</Link>
-      <Link className='mr-8 uppercase hover:text-slate-200' to='/meals'>Meals</Link>
-      <Link className='mr-8 uppercase hover:text-slate-200' to='/contact'>Contact</Link>
+      <li className='mr-8 uppercase hover:text-slate-200'><ActiveLink  to='/'>Home</ActiveLink></li>
+     <li className='mr-8 uppercase hover:text-slate-200'><ActiveLink  to='/about'>About</ActiveLink></li>
+      <li className='mr-8 uppercase hover:text-slate-200'><ActiveLink  to='/meals'>Meals</ActiveLink></li>
+     <li className='mr-8 uppercase hover:text-slate-200'><ActiveLink  to='/contact'>Contact</ActiveLink></li>
     </ul>
 </div>
         </div>
