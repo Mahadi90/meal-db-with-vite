@@ -11,6 +11,7 @@ import About from './About';
 import Meals from './Meals';
 import Contact from './Contact';
 import Home from './Home';
+import MealDetails from './MealDetails';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
      {
       path: 'meals',
       element: <Meals/>,
-      loader: () => fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=fish')
+      loader: () => fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood")
+     },
+     {
+      path: 'singleMeal/:idMeal',
+      element: <MealDetails/>
      },
      {
       path: 'contact',
